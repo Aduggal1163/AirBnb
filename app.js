@@ -88,7 +88,7 @@ app.use((req, res, next) => {
 //   let registeredUser=await User.register(fakeuser,"helloWorld"); //hellowWrold is apssword
 //   res.send(registeredUser);
 // })
-app.get("/welcome", (req, res) => {
+app.all("/", (req, res) => {
   res.render("welcome"); // Render the welcome page view
 });
 app.get("/privacy", (req, res) => {
@@ -109,7 +109,6 @@ app.use((err, req, res, next) => {
   // res.status(statusCode).send(message);
   res.status(statusCode).render("error.ejs", { err });
 });
-
 app.listen(8080, () => {
   console.log("server is listening to port 8080");
 });
