@@ -1,0 +1,97 @@
+<style>
+    /* Footer Styling */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-brand h1 {
+    font-size: 1.8em;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links, .socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li, .socials li {
+    margin: 0;
+}
+
+.footer-links a, .social-icon {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover, .social-icon:hover {
+    color: #3498db;
+}
+
+.social-icon {
+    font-size: 1.4em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+</style>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h1>Urban Heaven</h1>
+        </div>
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li> &nbsp;&nbsp;&nbsp;
+            </ul>
+            <ul class="socials">
+                <li><a href="https://facebook.com" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Urban Heaven PVT. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

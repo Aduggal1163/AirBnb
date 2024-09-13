@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to UrbanHeaver</title>
+    <link rel="icon" href="./images/kisspng-university-of-houston-university-of-the-incarnate-partners-instadium-1713917804368.webp">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url("images/giphy.gif");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 0.1em;
+        }
+
+        .hero-title span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(-100px);
+            animation: dropDown 1s ease forwards;
+        }
+
+        /* Animate letters dropping */
+        @keyframes dropDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subtitle and Button Styling */
+        .hero-subtitle {
+            font-size: 1.5em;
+            margin: 10px 0 20px;
+            animation: fadeIn 2s ease-out forwards 1s;
+        }
+
+        .explore-btn {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #4f9eab;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.5s ease, background-color 0.3s ease;
+            animation: bounceIn 2s ease-out forwards 1.5s;
+        }
+
+        .explore-btn:hover {
+            background-color: rgb(73, 154, 252);
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+ 
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <!-- Wrapping each letter with span for animation -->
+                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span> 
+                <span>t</span><span>o</span> 
+                <span>U</span><span>r</span><span>b</span><span>a</span><span>n</span><span>H</span><span>e</span><span>a</span><span>v</span><span>e</span><span>n</span>
+            </h1>
+            <p class="hero-subtitle">Discover Unique Places to Stay</p>
+            <a href="/listings" class="explore-btn">Start Exploring</a>
+        </div>
+    </section>
+
+    
+</body>
+</html>
+<script>
+    // Apply staggered animation delays to each letter
+    const letters = document.querySelectorAll('.hero-title span');
+    letters.forEach((letter, index) => {
+        letter.style.animationDelay = `${index * 0.1}s`; // Delay increases by 0.1s for each letter
+    });
+</script>
